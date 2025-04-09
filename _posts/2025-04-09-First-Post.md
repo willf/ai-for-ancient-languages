@@ -1,5 +1,5 @@
 ---
-title: "A Review of AI Applications in Human Sciences Research"
+title: "Chapinal-Heras and Díaz-Sánchez, 2024: A Review of AI Applications in Human Sciences Research"
 date: 2025-04-09
 ---
 
