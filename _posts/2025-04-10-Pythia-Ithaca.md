@@ -16,4 +16,4 @@ I want to focus on the _methods_ used in the papers, partly because the details 
 
 The Pythia system uses the Packard Humanities Institute (PHI) [corpus of Greek epigraphic data](https://inscriptions.packhum.org/). The researchers
 
-Example epigraph and transcription: <img alt="PHI inscription" src="assets/41586_2022_4448_Fig4_ESM.webp">
+Example epigraph and transcription: <img alt="PHI inscription" src="assets/img/41586_2022_4448_Fig4_ESM.webp">

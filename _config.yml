@@ -2,3 +2,8 @@ theme: minima
 title: AI For Ancient Languages
 author: Will Fitzgerald
 description: An ongoing blog about AI for Ancient Languages
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
