@@ -18,7 +18,7 @@ The Pythia system uses the Packard Humanities Institute (PHI) [corpus of Greek e
 
 1. Remove all diacritics and case-normalize (convert to lowercase)
 2. Use reconstructed letters as present in the corpus
-3. Use `-` for still unknown letters
+3. Use `-` for still unknown letters -- although it looks more like they space separate the unknown characters.
 4. Seem to remove some characters (like `:` ? in the example below)
 
 Example epigraph and transcription: <img alt="PHI inscription" src="https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-022-04448-z/MediaObjects/41586_2022_4448_Fig4_ESM.jpg?as=webp">
