@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on AI For Ancient Languages</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:1313/ai-for-ancient-languages/posts/</link>
     <description>Recent content in Posts on AI For Ancient Languages</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Apr 2025 11:07:47 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/ai-for-ancient-languages/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Pythia and Ithaca tools</title>
-      <link>http://localhost:1313/posts/2025-04-10-pythia-ithaca/</link>
+      <link>http://localhost:1313/ai-for-ancient-languages/posts/2025-04-10-pythia-ithaca/</link>
       <pubDate>Fri, 11 Apr 2025 11:07:47 -0400</pubDate>
-      <guid>http://localhost:1313/posts/2025-04-10-pythia-ithaca/</guid>
+      <guid>http://localhost:1313/ai-for-ancient-languages/posts/2025-04-10-pythia-ithaca/</guid>
       <description>&lt;p&gt;The &lt;a href=&#34;https://doi.org/10.18653/v1/D19-1668&#34;&gt;Pythia&lt;/a&gt; and &lt;a href=&#34;https://doi.org/10.1038/s41586-022-04448-z&#34;&gt;Ithaca&lt;/a&gt; papers, by Assael et al., describe deep learning approaches to deciphering epigraphic data.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chapinal-Heras and Díaz-Sánchez, 2024: A Review of AI Applications in Human Sciences Research</title>
-      <link>http://localhost:1313/posts/2025-04-09-first-post/</link>
+      <link>http://localhost:1313/ai-for-ancient-languages/posts/2025-04-09-first-post/</link>
       <pubDate>Wed, 09 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2025-04-09-first-post/</guid>
+      <guid>http://localhost:1313/ai-for-ancient-languages/posts/2025-04-09-first-post/</guid>
       <description>&lt;p&gt;This overview article describes the use of AI in the &amp;ldquo;human sciences,&amp;rdquo; with a special emphasis on paleography, epigraphy, and archeology. It&amp;rsquo;s a good source for bibliography items, and we&amp;rsquo;ll look at several of the papers discussed in it. For our purposes, we&amp;rsquo;ll look especially at articles most connected to ancient languages. Here, we&amp;rsquo;ll just note some of the efforts, without a long discussion of each.&lt;/p&gt;&#xA;&lt;p&gt;Citation: Chapinal-Heras, Diego, and Carlos Díaz-Sánchez. 2024. “A Review of AI Applications in Human Sciences Research.” Digital Applications in Archaeology and Cultural Heritage 32 (March):e00323. &lt;a href=&#34;https://doi.org/10.1016/j.daach.2024.e00323&#34;&gt;https://doi.org/10.1016/j.daach.2024.e00323&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
