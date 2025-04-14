@@ -1,4 +1,4 @@
-baseURL = 'https://willf.github.io/ai-for-ancient-languages/'
+# baseURL = 'https://willf.github.io/ai-for-ancient-languages/'
 languageCode = 'en-us'
 title = 'AI For Ancient Languages'
 theme = 'ananke'
