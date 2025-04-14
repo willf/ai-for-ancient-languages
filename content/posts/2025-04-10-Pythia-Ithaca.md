@@ -19,6 +19,20 @@ The Pythia system uses the Packard Humanities Institute (PHI) [corpus of Greek e
 3. Use `-` for still unknown letters -- although it looks more like they space separate the unknown characters.
 4. Seem to remove some characters (like `:` ? in the example below)
 
-Example epigraph and transcription: <img alt="PHI inscription" src="https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41586-022-04448-z/MediaObjects/41586_2022_4448_Fig4_ESM.jpg?as=webp">
+Example epigraph and transcription:
+
+![Reconstructed epigraph, source https://www.nature.com/articles/s41586-022-04448-z](/41586_2022_4448_Fig1_HTML.webp)
 
 Note: **This is still a work in progress**
+
+## Bibliography
+
+1. **Assael et al. (2019) - PYTHIA Project**
+
+   - **Summary:** Developed PYTHIA, a fully automated deep learning model trained to restore damaged ancient Greek inscriptions by predicting the missing character sequences. Created the associated PHI-ML dataset.
+   - **Link:** [https://doi.org/10.18653/v1/D19-1668](https://doi.org/10.18653/v1/D19-1668)
+
+2. **Assael et al. (2020/Nature 2022) - Ithaca Project**
+
+   - **Summary:** Developed Ithaca, software using Deep Neural Networks (DNNs) building on PYTHIA. It focuses on restoring text _and_ attributing the geographical and temporal origins of ancient Greek epigraphical documents by leveraging textual and contextual patterns.
+   - **Link:** [https://doi.org/10.1038/s41586-022-04448-z](https://doi.org/10.1038/s41586-022-04448-z)
