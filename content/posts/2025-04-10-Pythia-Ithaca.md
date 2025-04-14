@@ -21,7 +21,7 @@ The Pythia system uses the Packard Humanities Institute (PHI) [corpus of Greek e
 
 Example epigraph and transcription:
 
-![Reconstructed epigraph, source https://www.nature.com/articles/s41586-022-04448-z](/41586_2022_4448_Fig1_HTML.webp)
+![Reconstructed epigraph](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-022-04448-z/MediaObjects/41586_2022_4448_Fig1_HTML.png?as=webp)
 
 Note: **This is still a work in progress**
 
