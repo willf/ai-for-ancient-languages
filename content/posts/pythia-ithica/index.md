@@ -19,9 +19,9 @@ The Pythia system uses the Packard Humanities Institute (PHI) [corpus of Greek e
 3. Use `-` for still unknown letters -- although it looks more like they space separate the unknown characters.
 4. Seem to remove some characters (like `:` ? in the example below)
 
-Example [epigraph and transcription](https://www.nature.com/articles/s41586-022-04448-z/figures/1) copied from the Ithaca paper:
+Example [Raw and processed inscription](https://www.nature.com/articles/s41586-022-04448-z/figures/4) copied from the Ithaca paper:
 
-![Reconstructed epigraph](41586_2022_4448_Fig1_HTML.webp)
+![Reconstructed epigraph](41586_2022_4448_Fig4_ESM.webp)
 
 Note: **This is still a work in progress**
 
