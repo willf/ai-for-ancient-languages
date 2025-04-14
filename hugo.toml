@@ -4,7 +4,7 @@ title = 'AI For Ancient Languages'
 theme = 'ananke'
 author = 'Will Fitzgerald'
 description = 'AI For Ancient Languages'
-copyright = '2025 Will Fitzgerald'
+copyright = 'Will Fitzgerald'
 [params]
 body_classes = "georgia bg-near-white"
 [caches]
