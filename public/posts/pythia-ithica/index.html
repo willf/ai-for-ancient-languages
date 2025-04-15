@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
@@ -11,12 +11,12 @@
     
     
     
-      <meta name="robots" content="index, follow">
+      <meta name="robots" content="noindex, nofollow">
     
     
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
 
 
 
@@ -32,10 +32,10 @@
     
 
     
-      <link rel="canonical" href="/posts/pythia-ithica/">
+      <link rel="canonical" href="//localhost:1313/posts/pythia-ithica/">
     
 
-    <meta property="og:url" content="/posts/pythia-ithica/">
+    <meta property="og:url" content="//localhost:1313/posts/pythia-ithica/">
   <meta property="og:site_name" content="AI For Ancient Languages">
   <meta property="og:title" content="The Pythia and Ithaca tools">
   <meta property="og:description" content="The Pythia and Ithaca papers, by Assael et al., describe deep learning approaches to deciphering epigraphic data.">
@@ -49,15 +49,13 @@
   <meta itemprop="description" content="The Pythia and Ithaca papers, by Assael et al., describe deep learning approaches to deciphering epigraphic data.">
   <meta itemprop="datePublished" content="2025-04-11T11:07:47-04:00">
   <meta itemprop="dateModified" content="2025-04-11T11:07:47-04:00">
-  <meta itemprop="wordCount" content="227">
+  <meta itemprop="wordCount" content="931">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The Pythia and Ithaca tools">
   <meta name="twitter:description" content="The Pythia and Ithaca papers, by Assael et al., describe deep learning approaches to deciphering epigraphic data.">
 
-      
-    
 	
-  </head><body class="ma0 georgia bg-near-white production">
+  </head><body class="ma0 georgia bg-near-white development">
 
     
    
@@ -109,17 +107,69 @@
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The <a href="https://doi.org/10.18653/v1/D19-1668">Pythia</a> and <a href="https://doi.org/10.1038/s41586-022-04448-z">Ithaca</a> papers, by Assael et al., describe deep learning approaches to deciphering epigraphic data.</p>
 <p>I want to focus on the <em>methods</em> used in the papers, partly because the details matter, and can help direct my own research. Because the Pythia paper is more recent, I will focus on it.</p>
+<p>Ithaca attempts to predict three different things at once: text restorations, approximate text age, and approximate location. It is a &ldquo;deep learning&rdquo; attentional/transformer pipeline.</p>
 <h2 id="preprocessing">Preprocessing</h2>
 <p>The Pythia system uses the Packard Humanities Institute (PHI) <a href="https://inscriptions.packhum.org/">corpus of Greek epigraphic data</a>. The researchers do the following normalization:</p>
 <ol>
 <li>Remove all diacritics and case-normalize (convert to lowercase)</li>
 <li>Use reconstructed letters as present in the corpus</li>
-<li>Use <code>-</code> for still unknown letters &ndash; although it looks more like they space separate the unknown characters.</li>
+<li>Use - for still unknown letters &ndash; although it looks more like they space separate the unknown characters.</li>
 <li>Seem to remove some characters (like <code>:</code> ? in the example below)</li>
 </ol>
+<p>They do <em>not</em> regularize sigmas to (say) lunate sigma<code>ϲ</code>, but use both <code>σ</code> and <code>ς</code>.</p>
 <p>Example <a href="https://www.nature.com/articles/s41586-022-04448-z/figures/4">Raw and processed inscription</a> copied from the Ithaca paper:</p>
-<p><img src="41586_2022_4448_Fig4_ESM.webp" alt="Reconstructed epigraph"></p>
-<p>Note: <strong>This is still a work in progress</strong></p>
+<p><img src="41586_2022_4448_Fig4_ESM.webp" alt="Reconstructed epigraph">
+<em>Figure 4, Reconstructed epigraph</em></p>
+<p>Only common words (appearing 10 or more times in the PHI database) are used as vocabulary; the rest, as well as damaged, words are marked as the single token <code>[unk]</code>. Each sentence is also padded with a start-of-sentence character (<code>&lt;</code>).</p>
+<p>Because (compared to other large language tasks) there is a paucity of Ancient Greek epigraphy data, the PHI data was &ldquo;augmented&rdquo; in several ways, including text clipping, text masking, word deletion, and sentence swapping. Text clipping subselects portions of the text; text masking randomly hides &ldquo;up to half&rdquo; of the text; word deletion randomly removes some words; sentence swapping randomly swaps sentences.</p>
+<p>Ithaca &ldquo;was trained for a week on 128 Tensor Processing Units (TPU) v4 pods on the Google Cloud Platform.&rdquo; In April, 2025, this would represent a cost of $70,000 at <a href="https://web.archive.org/web/20250415133754/https://cloud.google.com/tpu/pricing?hl=en">current</a> non-discounted cost; at 7.4 Kwh of consumption<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, this is about 160,000 Kwh, or approximately what it takes to power an average US house for 15 years<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>For prediction of text restorations, they selected a &ldquo;sequence of missing characters&rdquo; to predict in the evaluation set. Text restoration on a non-randomly sampled example is provided in the <a href="https://www.nature.com/articles/s41586-022-04448-z/figures/7">Data figure 4</a>, and suggests that Ithaca&rsquo;s restoration was more accurate than Pythia&rsquo;s, when compared to the &ldquo;Rhodes-Osborne edition.&rdquo; Although they do not note that this is a non-random sample, they do note that in the context of a tool, the suggested restorations would be provided as sets of answers, not just the most probable one. Unsurprisingly, the longer the lacuna, the less likely it was for Ithaca and Pythia to correctly guess the correct reconstruction.</p>
+<p><img src="41586_2022_4448_Fig7_ESM.webp" alt="Data Figure 4, Restoration performance comparison">
+<em>Data Figure 4, Restoration performance comparison</em></p>
+<p>For evaluation, they provide both a <em>character error rate</em> (CER) and <em>accuracy</em> score, with CER scores calculated for each text restoration sequence length (up to 10), and then averaging these CERs (which seems a bit dodgy?)</p>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Restoration Average CER (%)</th>
+          <th>Top 1% Accuracy</th>
+          <th>Top 20%</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Human + Ithaca</td>
+          <td><strong>18.3</strong></td>
+          <td><strong>71.7</strong></td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Human</td>
+          <td>59.6</td>
+          <td>25.3</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>Ithaca</td>
+          <td>26.3</td>
+          <td>61.8</td>
+          <td>78.3</td>
+      </tr>
+      <tr>
+          <td>Pythia</td>
+          <td>47.0</td>
+          <td>32.6</td>
+          <td>53.9</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>Experimental results. CER: lower is better. Average: higher is better.</em></p>
+<p>Note that these results are based on randomly creating lacunae in the text, and restoring them. What I find evocative is the large improvement in AI-assisted restoration compared to either human alone or AI alone.</p>
+<h2 id="summary">Summary</h2>
+<p>The authors provide an <a href="https://predictingthepast.com/">on-line tool</a> to do limited text restoration of epigraphs, allowing up to ten characters to be restored, requiring a text of between 50 and around 736 characters. It&rsquo;s fairly hard to use, but not impossible; it&rsquo;s more limited by the character length and total number of restorations possible.</p>
+<p>I did two quick attempts at restoration. One was some text from the Packard Humanities Institute (<a href="https://inscriptions.packhum.org/text/234304?&amp;bookid=118&amp;location=1700">BCH 8 (1884) 470,1)</a>, and the other from the text of the Gospel of John. The PHI text approximated the results in the table above (of course, it&rsquo;s a very small sample). For the John passage, I gave it <a href="https://www.biblegateway.com/passage/?search=John%201%3A18-24&amp;version=SBLGNT">John 1:18-24</a>, leaving <code>Φαρισαίων</code> as a lacuna. Unsurprisingly, the tool does poorly for text restoartion, with its best guesses <code>γραμματων</code> and <code>πραγματων</code>. Not only is this non-epigraphic text, it is unlikely that <code>Φαρισαῖος</code> and its variants appear in the PHI corpus, and the contextual information will be very different. For what it&rsquo;s worth, the location and date attributes were off as well—again, unsurprisingly.</p>
+<p>This paper does suggest to me that tools for text restoration can be helpful to researchers in conjunction with the researchers&rsquo; own knowledge. But the tooling has to be built to integrate into a researcher&rsquo;s own workflow; and that training data and evaluation methods matter a great deals.</p>
+<p>These are papers which are easy to use to suggest that text reconstruction, dating, and location are solved problems — not that the authors so suggest, but the popular science press. This has to be resisted; these papers are only a start towards incorporating AI assistance for the ordinary working epigrapher or papyrologist.</p>
 <h2 id="bibliography">Bibliography</h2>
 <ol>
 <li>
@@ -136,7 +186,19 @@ Chatzipanagiotou, M., Androutsopoulos, I., Prag, J., de Freitas, N., 2020. Resto
 and attributing ancient texts using deep neural networks. Nature 603, 280–283.
 <a href="https://doi.org/10.1038/s41586-022-04448-z">https://doi.org/10.1038/s41586-022-04448-z</a>.</p>
 </li>
-</ol><ul class="pa0">
+</ol>
+<h2 id="footnotes">Footnotes</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://massedcompute.com/faq-answers/?question=What%20is%20the%20power%20consumption%20of%20TPU%20v4%20compared%20to%20NVIDIA%20H100%20GPUs?">Power Consumption Comparison of TPU v4 and NVIDIA H100 GPUs</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://www.constellation.com/energy-101/energy-education/average-home-power-usage.html">How many kWh does a house use?</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div><ul class="pa0">
   
 </ul>
 <div class="mt6 instapaper_ignoref">
@@ -157,7 +219,7 @@ and attributing ancient texts using deep neural networks. Nature 603, 280–283.
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
-  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="/" >
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="//localhost:1313/" >
     &copy;  Will Fitzgerald 2025 
   </a>
     <div><div class="ananke-socials"></div>
