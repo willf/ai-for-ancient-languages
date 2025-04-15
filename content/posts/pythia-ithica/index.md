@@ -28,6 +28,8 @@ Example [Raw and processed inscription](https://www.nature.com/articles/s41586-0
 ![Reconstructed epigraph](41586_2022_4448_Fig4_ESM.webp)
 _Figure 4, Reconstructed epigraph_
 
+## Training and Evalution
+
 Only common words (appearing 10 or more times in the PHI database) are used as vocabulary; the rest, as well as damaged, words are marked as the single token `[unk]`. Each sentence is also padded with a start-of-sentence character (`<`).
 
 Because (compared to other large language tasks) there is a paucity of Ancient Greek epigraphy data, the PHI data was "augmented" in several ways, including text clipping, text masking, word deletion, and sentence swapping. Text clipping subselects portions of the text; text masking randomly hides "up to half" of the text; word deletion randomly removes some words; sentence swapping randomly swaps sentences.
