@@ -3,12 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2025-04-23T09:34:01-04:00</lastmod>
-  </url><url>
-    <loc>/posts/deep-learning/</loc>
-    <lastmod>2025-04-23T09:34:01-04:00</lastmod>
+    <lastmod>2025-04-23T12:52:35-04:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
+    <lastmod>2025-04-23T12:52:35-04:00</lastmod>
+  </url><url>
+    <loc>/posts/word-vectors-oversimplified/</loc>
+    <lastmod>2025-04-23T12:52:35-04:00</lastmod>
+  </url><url>
+    <loc>/posts/deep-learning/</loc>
     <lastmod>2025-04-23T09:34:01-04:00</lastmod>
   </url><url>
     <loc>/posts/pythia-ithica/</loc>

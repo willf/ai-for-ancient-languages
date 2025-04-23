@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Will Fitzgerald</copyright>
-    <lastBuildDate>Wed, 23 Apr 2025 09:34:01 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 23 Apr 2025 12:52:35 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Word Vectors Oversimplified</title>
+      <link>/posts/word-vectors-oversimplified/</link>
+      <pubDate>Wed, 23 Apr 2025 12:52:35 -0400</pubDate>
+      <guid>/posts/word-vectors-oversimplified/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This is a &lt;a href=&#34;https://willwhim.wpengine.com/2015/05/12/word-vectors-machine-learning-oversimplified/&#34;&gt;reposting of an article&lt;/a&gt; I wrote in May, 2015.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Word vectors have become increasingly important in as features in machine learning models for natural language processing. The idea is to represent a word in some multidimensional space (the vector) in which words which are “similar” are similar in that space. Typically, one hopes that word vectors will provide some kind of semantic similarity. A typical party trick is to use word vectors to solve word analogy problems; e.g., king is to queen as man is to ? And hope that answer is woman.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Deep Learning</title>
       <link>/posts/deep-learning/</link>
