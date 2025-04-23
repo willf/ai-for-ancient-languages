@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Deep Learning | AI For Ancient Languages</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="In this brief article, I will discuss an overview article from 2015 &ndash; a long time ago in research years &ndash; in Nature called Deep Learning, essentially the underlying architecture of what is called machine learning these days. One of the co-authors is Geoffrey Hinton, who was awarded a Nobel Prize for his work over the decades on neural networks (Cool fact: Hinton is the great-great-grandson of George Boole, after whom boolean logic is named).">
+    <meta name="generator" content="Hugo 0.145.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="/posts/deep-learning/">
+    
+
+    <meta property="og:url" content="/posts/deep-learning/">
+  <meta property="og:site_name" content="AI For Ancient Languages">
+  <meta property="og:title" content="Deep Learning">
+  <meta property="og:description" content="In this brief article, I will discuss an overview article from 2015 – a long time ago in research years – in Nature called Deep Learning, essentially the underlying architecture of what is called machine learning these days. One of the co-authors is Geoffrey Hinton, who was awarded a Nobel Prize for his work over the decades on neural networks (Cool fact: Hinton is the great-great-grandson of George Boole, after whom boolean logic is named).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-23T09:34:01-04:00">
+    <meta property="article:modified_time" content="2025-04-23T09:34:01-04:00">
+
+  <meta itemprop="name" content="Deep Learning">
+  <meta itemprop="description" content="In this brief article, I will discuss an overview article from 2015 – a long time ago in research years – in Nature called Deep Learning, essentially the underlying architecture of what is called machine learning these days. One of the co-authors is Geoffrey Hinton, who was awarded a Nobel Prize for his work over the decades on neural networks (Cool fact: Hinton is the great-great-grandson of George Boole, after whom boolean logic is named).">
+  <meta itemprop="datePublished" content="2025-04-23T09:34:01-04:00">
+  <meta itemprop="dateModified" content="2025-04-23T09:34:01-04:00">
+  <meta itemprop="wordCount" content="694">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Deep Learning">
+  <meta name="twitter:description" content="In this brief article, I will discuss an overview article from 2015 – a long time ago in research years – in Nature called Deep Learning, essentially the underlying architecture of what is called machine learning these days. One of the co-authors is Geoffrey Hinton, who was awarded a Nobel Prize for his work over the decades on neural networks (Cool fact: Hinton is the great-great-grandson of George Boole, after whom boolean logic is named).">
+
+      
+    
+	
+  </head><body class="ma0 georgia bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        AI For Ancient Languages
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Deep Learning</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-04-23T09:34:01-04:00">April 23, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>In this brief article, I will discuss an overview article from 2015 &ndash; a long time ago in research years &ndash; in <em>Nature</em> called <a href="https://www.nature.com/articles/nature14539"><em>Deep Learning</em></a>, essentially the underlying architecture of what is called machine learning these days. One of the co-authors is Geoffrey Hinton, who was awarded a Nobel Prize for his work over the decades on neural networks (Cool fact: Hinton is the great-great-grandson of George Boole, after whom boolean logic is named).</p>
+<p>But it would be better to read the <a href="https://www.nature.com/articles/nature14539">article</a> itself, which is relatively well-written.</p>
+<p>I think the key insights of this paper are severalfold.</p>
+<h2 id="general--specific">General &gt; Specific</h2>
+<p>General architectures are counter-intuitively better than specific architectures for machine learning. One would expect that bespoke engineering would be better at solving tasks in a domain: for example, one would expect providing a machine with paradigm charts of Greek verbs would better than not providing them. But, in the end, such systems with hand-built features are difficult to create, have sharp failure points, and eventually are overwhelmed by literally exponential improvements in the processing power of computers.</p>
+<p>The give the example of creating a classifier that can distinguish between white wolves and Samoyeds; two images of the same Samoyed might look radically different due to lighting, and an image of a white wolf and a Samoyed might look very similar. They write:</p>
+<blockquote>
+<p>The conventional option is
+to hand design good feature extractors, which requires a consider-
+able amount of engineering skill and domain expertise. But this can
+all be avoided if good features can be learned automatically using a
+general-purpose learning procedure. This is the key advantage of
+deep learning.</p></blockquote>
+<p>This is also true in modeling language:</p>
+<blockquote>
+<p>The issue of representation lies at the heart of the debate between
+the logic-inspired and the neural-network-inspired paradigms for
+cognition. In the logic-inspired paradigm, an instance of a symbol is
+something for which the only property is that it is either identical or
+non-identical to other symbol instances. It has no internal structure
+that is relevant to its use; and to reason with symbols, they must be
+bound to the variables in judiciously chosen rules of inference. By
+contrast, neural networks just use big activity vectors, big weight
+matrices and scalar non-linearities to perform the type of fast ‘intuitive’
+inference that underpins effortless commonsense reasoning.</p></blockquote>
+<h2 id="much-more--more">Much more &gt; More</h2>
+<p>Deep learning succeeds in part because much more data is used, and many more detectors and layers are used than previous machine learning models could use. One of the disadvantages of neural networks is their tendency to get stuck in &ldquo;local minima,&rdquo; but with lots of very shallow local minima, systems tend not to get caught. An analogy is the difference between walking in the forest and getting caught in one deep ravine versus walking in a forest with many small depressions.</p>
+<h2 id="cheaper--expensive">Cheaper &gt; Expensive</h2>
+<p>Architectural advances have made it possible to train models more efficiently, and these can accelerate the &ldquo;much more &gt; more&rdquo; quality of networks. For example, the article mentions GPUs and the use of rectified linear units (ReLUs). In general, improvements in neural network architecture tend to focus on doing less with more: smaller amounts of computation on ever more data.</p>
+<blockquote>
+<p>Recent &hellip; architectures have 10 to 20 layers of ReLUs, hundreds of
+millions of weights, and billions of connections between
+units. Whereas training such large networks could have taken weeks
+only two years ago, progress in hardware, software and algorithm
+parallelization have reduced training times to a few hours.</p></blockquote>
+<h2 id="standard-datasets-and-metrics--bespoke-datasets-and-metrics">Standard datasets and metrics &gt; Bespoke datasets and metrics</h2>
+<p>Somewhat implied in the article is the importance of creating standard datasets and metrics. For example, the mention the ImageNet competition, which contained about a million images defined in about a thousand classes. This allowed the field to have common data on which to train and evaluate systems, and it was easy to acknowledge that convolution nets were much better than competing systems.</p>
+<p>I have not really discussed many of the specific parts of deep learning here, such as the structure of deep learning networks, gradient descent, convolutional networks, or long short-term networks (LTSMs). The paper does a pretty good job of this.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="/" >
+    &copy;  Will Fitzgerald 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

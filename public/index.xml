@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Will Fitzgerald</copyright>
-    <lastBuildDate>Fri, 11 Apr 2025 11:07:47 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 23 Apr 2025 09:34:01 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deep Learning</title>
+      <link>/posts/deep-learning/</link>
+      <pubDate>Wed, 23 Apr 2025 09:34:01 -0400</pubDate>
+      <guid>/posts/deep-learning/</guid>
+      <description>&lt;p&gt;In this brief article, I will discuss an overview article from 2015 &amp;ndash; a long time ago in research years &amp;ndash; in &lt;em&gt;Nature&lt;/em&gt; called &lt;a href=&#34;https://www.nature.com/articles/nature14539&#34;&gt;&lt;em&gt;Deep Learning&lt;/em&gt;&lt;/a&gt;, essentially the underlying architecture of what is called machine learning these days. One of the co-authors is Geoffrey Hinton, who was awarded a Nobel Prize for his work over the decades on neural networks (Cool fact: Hinton is the great-great-grandson of George Boole, after whom boolean logic is named).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Pythia and Ithaca tools</title>
       <link>/posts/pythia-ithica/</link>
