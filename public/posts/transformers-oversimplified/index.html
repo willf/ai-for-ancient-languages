@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Transformers (Way) Oversimplified | AI For Ancient Languages</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="The 2017 paper Attention is all you need, was revolutionary for machine learning for sequential data, in particular language data. In some ways, the main idea behind the paper is simple. Previous ML models processed each item in a sequence sequentially, with perhaps a small amount of context. This paper laid the groundwork for transformer models. The abstract lays this out:
+
+The dominant sequence transduction models are based on complex recurrent or
+convolutional neural networks that include an encoder and a decoder. The best
+performing models also connect the encoder and decoder through an attention
+mechanism. We propose a new simple network architecture, the Transformer,
+based solely on attention mechanisms, dispensing with recurrence and convolutions
+entirely. Experiments on two machine translation tasks show these models to
+be superior in quality while being more parallelizable and requiring significantly
+less time to train. Our model achieves 28.4 BLEU1 on the WMT 2014
+English-to-German translation task, improving over the existing best results, including
+ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task,
+our model establishes a new single-model state-of-the-art BLEU score of 41.8 after
+training for 3.5 days on eight GPUs, a small fraction of the training costs of the
+best models from the literature. We show that the Transformer generalizes well to
+other tasks by applying it successfully to English constituency parsing both with
+large and limited training data.">
+    <meta name="generator" content="Hugo 0.145.0">
+    
+    
+    
+      <meta name="robots" content="index, follow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.d05fb5f317fcf33b3a52936399bdf6f47dc776516e1692e412ec7d76f4a5faa2.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="/posts/transformers-oversimplified/">
+    
+
+    <meta property="og:url" content="/posts/transformers-oversimplified/">
+  <meta property="og:site_name" content="AI For Ancient Languages">
+  <meta property="og:title" content="Transformers (Way) Oversimplified">
+  <meta property="og:description" content="The 2017 paper Attention is all you need, was revolutionary for machine learning for sequential data, in particular language data. In some ways, the main idea behind the paper is simple. Previous ML models processed each item in a sequence sequentially, with perhaps a small amount of context. This paper laid the groundwork for transformer models. The abstract lays this out:
+The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU1 on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-01T19:22:28-04:00">
+    <meta property="article:modified_time" content="2025-05-01T19:22:28-04:00">
+
+  <meta itemprop="name" content="Transformers (Way) Oversimplified">
+  <meta itemprop="description" content="The 2017 paper Attention is all you need, was revolutionary for machine learning for sequential data, in particular language data. In some ways, the main idea behind the paper is simple. Previous ML models processed each item in a sequence sequentially, with perhaps a small amount of context. This paper laid the groundwork for transformer models. The abstract lays this out:
+The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU1 on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.">
+  <meta itemprop="datePublished" content="2025-05-01T19:22:28-04:00">
+  <meta itemprop="dateModified" content="2025-05-01T19:22:28-04:00">
+  <meta itemprop="wordCount" content="694">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Transformers (Way) Oversimplified">
+  <meta name="twitter:description" content="The 2017 paper Attention is all you need, was revolutionary for machine learning for sequential data, in particular language data. In some ways, the main idea behind the paper is simple. Previous ML models processed each item in a sequence sequentially, with perhaps a small amount of context. This paper laid the groundwork for transformer models. The abstract lays this out:
+The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU1 on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.">
+
+      
+    
+	
+  </head><body class="ma0 georgia bg-near-white production">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        AI For Ancient Languages
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Transformers (Way) Oversimplified</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-05-01T19:22:28-04:00">May 1, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>The 2017 paper <a href="https://arxiv.org/pdf/1706.03762"><em>Attention is all you need</em></a>, was revolutionary for machine learning for sequential data, in particular language data. In some ways, the main idea behind the paper is simple. Previous ML models processed each item in a sequence sequentially, with perhaps a small amount of context. This paper laid the groundwork for <em>transformer models</em>. The abstract lays this out:</p>
+<blockquote>
+<p>The dominant sequence transduction models are based on complex recurrent or
+convolutional neural networks that include an encoder and a decoder. The best
+performing models also connect the encoder and decoder through an attention
+mechanism. We propose a new simple network architecture, the Transformer,
+based solely on attention mechanisms, dispensing with recurrence and convolutions
+entirely. Experiments on two machine translation tasks show these models to
+be superior in quality while being more parallelizable and requiring significantly
+less time to train. Our model achieves 28.4 BLEU<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> on the WMT 2014
+English-to-German translation task, improving over the existing best results, including
+ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task,
+our model establishes a new single-model state-of-the-art BLEU score of 41.8 after
+training for 3.5 days on eight GPUs, a small fraction of the training costs of the
+best models from the literature. We show that the Transformer generalizes well to
+other tasks by applying it successfully to English constituency parsing both with
+large and limited training data.</p></blockquote>
+<p>So, the major claims of this paper are:</p>
+<ol>
+<li>The only thing needed is the <em>attention</em> model (&ldquo;Attention is all you need.&rdquo;) because this simpler model achieves better results than more complicated models.</li>
+<li>This simpler model is cheaper to train.</li>
+</ol>
+<p>This has been borne out in subsequent research.</p>
+<p>So, the basic question to answer: What is an attention model?</p>
+<p>Language data is essentially sequential in nature: one damn thing after another. A first step in language processing to to break the text into words, or more specifically tokens. These tokens have a natural order: each token could be assigned an index number corresponding to its position in the stream of tokens. For example, &ldquo;the cat sat on the mat&rdquo; might be broken down into the tokens <em>the<sub>1</sub></em>, <em>cat<sub>2</sub></em>, <em>sat<sub>3</sub></em>, <em>on<sub>4</sub></em>, <em>the<sub>5</sub></em>, and <em>mat<sub>6</sub></em>. Most previous ML models ignored most of that sequential context, although they might look at very local contexts<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>But attention models pay attention to those positions. This requires more memory and processing. For example, a particular architecture might have a window of 1024 tokens, each with an index, and each numbered token conditioning or conditioned by any other token in that window.</p>
+<p>Essentially, a particular model learns to <em>pay attention</em> to (assign higher weights to) different parts of longer sequences.</p>
+<p>Consider a &ldquo;fill in the gap&rdquo; task where the model is expected to fill in the gap in sentences like:</p>
+<blockquote>
+<ol>
+<li>The astronomer saw the moon with a ____.</li>
+<li>The chemist saw the atom with a ____.</li>
+</ol></blockquote>
+<p>We, as humans, pay attention to the subject of these sentences (<em>astronomer</em>, <em>chemist</em>) and use their semantics to help us predict what is likely to fill the blanks (<em>telescope</em>, perhaps, for the astronomer and <em>microscope</em>, perhaps, for the chemist).</p>
+<p>This is more than hand-waving, it&rsquo;s hand-waving from very far away, but to do any more we&rsquo;d have to do some math.</p>
+<p>So, there is a lot of math, but it&rsquo;s relatively simple and straight-forward, at least compared to other architectures (the paper mentions recurrent and convolutional architectures) which lead to the speed-up in training.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>BLEU scores: &ldquo;BLEU (Bilingual Evaluation Understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another.&rdquo; <a href="https://huggingface.co/spaces/evaluate-metric/bleu">Reference</a>. For what it&rsquo;s worth, the score runs from 0.0 to 1.0 (or 0 to 100) where higher is better, and 1.0 (or 100) is perfect.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>For example, <em>n</em>-grams, where is an &rsquo;n-gram&rsquo; is a series of <em>n</em> words or tokens, typically five tokens or fewer. Given the general distributional nature of words, larger n-grams sizes tend to create very sparse data. For example, if there are 10,000 words in the languages vocabulary (a low number), there are 10,000<sup>5</sup>, or 10,000,000,000,000,000,000 distinct n-grams. But it&rsquo;s unlikely that any particular n-gram (&ldquo;blubber zoom the delightful happily&rdquo;) actually occurs.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="/" >
+    &copy;  Will Fitzgerald 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Will Fitzgerald</copyright>
-    <lastBuildDate>Wed, 23 Apr 2025 12:52:35 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 01 May 2025 19:22:28 -0400</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transformers (Way) Oversimplified</title>
+      <link>/posts/transformers-oversimplified/</link>
+      <pubDate>Thu, 01 May 2025 19:22:28 -0400</pubDate>
+      <guid>/posts/transformers-oversimplified/</guid>
+      <description>&lt;p&gt;The 2017 paper &lt;a href=&#34;https://arxiv.org/pdf/1706.03762&#34;&gt;&lt;em&gt;Attention is all you need&lt;/em&gt;&lt;/a&gt;, was revolutionary for machine learning for sequential data, in particular language data. In some ways, the main idea behind the paper is simple. Previous ML models processed each item in a sequence sequentially, with perhaps a small amount of context. This paper laid the groundwork for &lt;em&gt;transformer models&lt;/em&gt;. The abstract lays this out:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The dominant sequence transduction models are based on complex recurrent or&#xA;convolutional neural networks that include an encoder and a decoder. The best&#xA;performing models also connect the encoder and decoder through an attention&#xA;mechanism. We propose a new simple network architecture, the Transformer,&#xA;based solely on attention mechanisms, dispensing with recurrence and convolutions&#xA;entirely. Experiments on two machine translation tasks show these models to&#xA;be superior in quality while being more parallelizable and requiring significantly&#xA;less time to train. Our model achieves 28.4 BLEU&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; on the WMT 2014&#xA;English-to-German translation task, improving over the existing best results, including&#xA;ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task,&#xA;our model establishes a new single-model state-of-the-art BLEU score of 41.8 after&#xA;training for 3.5 days on eight GPUs, a small fraction of the training costs of the&#xA;best models from the literature. We show that the Transformer generalizes well to&#xA;other tasks by applying it successfully to English constituency parsing both with&#xA;large and limited training data.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Word Vectors Oversimplified</title>
       <link>/posts/word-vectors-oversimplified/</link>
