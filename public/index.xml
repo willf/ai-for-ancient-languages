@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Will Fitzgerald</copyright>
-    <lastBuildDate>Thu, 01 May 2025 19:22:28 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 07 May 2025 09:10:10 -0400</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparing Full Text Search</title>
+      <link>/posts/comparing-full-text-search/</link>
+      <pubDate>Wed, 07 May 2025 09:10:10 -0400</pubDate>
+      <guid>/posts/comparing-full-text-search/</guid>
+      <description>&lt;h2 id=&#34;tlg-full-text-search&#34;&gt;TLG Full Text Search&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://stephanus.tlg.uci.edu/Iris/demo/tsearch.jsp&#34;&gt;Full text search&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Breadth of search:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Full corpus&lt;/li&gt;&#xA;&lt;li&gt;Works by Author&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Flags:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Case sensitive&lt;/li&gt;&#xA;&lt;li&gt;Exact match&lt;/li&gt;&#xA;&lt;li&gt;Diacritic sensitive&lt;/li&gt;&#xA;&lt;li&gt;Adscript as subscript&lt;/li&gt;&#xA;&lt;li&gt;Wildcard&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Proximity (within &lt;em&gt;n&lt;/em&gt; words)&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Near (before or after)&lt;/li&gt;&#xA;&lt;li&gt;Before&lt;/li&gt;&#xA;&lt;li&gt;After&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The proximate can be &lt;em&gt;word form&lt;/em&gt;, &lt;em&gt;lemma&lt;/em&gt;, or &lt;em&gt;grammatical category&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;search-guide&#34;&gt;Search Guide&lt;/h3&gt;&#xA;&lt;p&gt;The search language seems to be a subset of regular expressions; the definition is given by example.&lt;/p&gt;&#xA;&lt;p&gt;This is from the full text search guide:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Transformers (Way) Oversimplified</title>
       <link>/posts/transformers-oversimplified/</link>

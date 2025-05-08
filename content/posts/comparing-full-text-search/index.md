@@ -1,6 +1,6 @@
 +++
 date = '2025-05-07T09:10:10-04:00'
-draft = true
+draft = false
 title = 'Comparing Full Text Search'
 +++
 
